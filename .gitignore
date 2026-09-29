@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Dataset files are obtained from their original releases.
+data/
+!docs/data.md
+
+# Generated experiment artifacts can be large.
+outputs/
+*.joblib
+*.feather
+*.npz
+
+# Local editor and OS files.
+.DS_Store
+.idea/
+.vscode/

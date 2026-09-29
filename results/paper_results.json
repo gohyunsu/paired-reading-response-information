@@ -1,0 +1,204 @@
+{
+  "publication": {
+    "title": "Paired Evaluation of Reader- and Question-Level Response Information for Eye-Tracking-Based Reading-Comprehension Prediction",
+    "venue": "IEEE International Conference on Consumer Electronics--Asia",
+    "year": 2026,
+    "authors": [
+      "Hyunsu Go",
+      "Sumin Lee",
+      "Kyeonghun Kim",
+      "Subeen Lee",
+      "Eunseob Choi",
+      "Ken Ying-Kai Liao",
+      "Nam-Joon Kim"
+    ]
+  },
+  "datasets": {
+    "OneStop": {
+      "rows": 9718,
+      "readers": 180,
+      "texts": 30,
+      "correct_rate": 0.812,
+      "outer_folds_per_axis": 5
+    },
+    "SB-SAT": {
+      "rows": 1900,
+      "readers": 95,
+      "texts": 4,
+      "correct_rate": 0.563,
+      "outer_folds_per_axis": 4
+    }
+  },
+  "table_i": [
+    {
+      "dataset": "OneStop",
+      "regime": "UT",
+      "base_auroc": 0.5608734024755138,
+      "gain_auroc": 0.058691922030017385,
+      "paper_gain_pp": 5.9,
+      "interval_95_gain_auroc": [0.030, 0.090]
+    },
+    {
+      "dataset": "OneStop",
+      "regime": "UR",
+      "base_auroc": 0.6211652615099716,
+      "gain_auroc": 0.07780418021075874,
+      "paper_gain_pp": 7.8,
+      "interval_95_gain_auroc": [0.055, 0.102]
+    },
+    {
+      "dataset": "SB-SAT",
+      "regime": "UT",
+      "base_auroc": 0.5637063739309404,
+      "gain_auroc": 0.010193231876380993,
+      "paper_gain_pp": 1.0,
+      "interval_95_gain_auroc": null
+    },
+    {
+      "dataset": "SB-SAT",
+      "regime": "UR",
+      "base_auroc": 0.5419082231356465,
+      "gain_auroc": 0.15353028196338336,
+      "paper_gain_pp": 15.3,
+      "interval_95_gain_auroc": [0.072, 0.226]
+    }
+  ],
+  "table_ii": [
+    {
+      "dataset": "OneStop",
+      "arm": "joint",
+      "input": "Joint baseline",
+      "base_ur": 0.6241753703968225,
+      "augmented_ur": 0.7009329497030494,
+      "gain_ur": 0.07675757930622704,
+      "gain_ut": 0.05989388262364082,
+      "paper_gain_ur_pp": 7.7,
+      "paper_gain_ut_pp": 6.0
+    },
+    {
+      "dataset": "OneStop",
+      "arm": "question",
+      "input": "Question hash",
+      "base_ur": 0.6842913537070681,
+      "augmented_ur": 0.7020737345123768,
+      "gain_ur": 0.01778238080530876,
+      "gain_ut": 0.059704169805543154,
+      "paper_gain_ur_pp": 1.8,
+      "paper_gain_ut_pp": 6.0,
+      "gain_reduction_from_baseline": 0.058975198500918265,
+      "interval_95_reduction": [0.0415227815607462, 0.07836423210152241]
+    },
+    {
+      "dataset": "OneStop",
+      "arm": "question_options",
+      "input": "Question and option hashes",
+      "base_ur": 0.7019560679034808,
+      "augmented_ur": 0.7053469550482012,
+      "gain_ur": 0.003390887144720449,
+      "gain_ut": 0.06008921775382172,
+      "paper_gain_ur_pp": 0.3,
+      "paper_gain_ut_pp": 6.0,
+      "gain_reduction_from_baseline": 0.07336669216150664,
+      "interval_95_reduction": [0.05188727916975648, 0.09655899154698745]
+    },
+    {
+      "dataset": "SB-SAT",
+      "arm": "scanpath",
+      "input": "Scanpath",
+      "base_ur": 0.5353925727278206,
+      "augmented_ur": 0.691484943222474,
+      "gain_ur": 0.15609237049465335,
+      "gain_ut": 0.004508544817623299,
+      "paper_gain_ur_pp": 15.6,
+      "paper_gain_ut_pp": 0.5
+    },
+    {
+      "dataset": "SB-SAT",
+      "arm": "lexical",
+      "input": "Lexical descriptors",
+      "base_ur": 0.6824105974197798,
+      "augmented_ur": 0.6873202062176496,
+      "gain_ur": 0.004909608797869752,
+      "gain_ut": 0.03242215491028532,
+      "paper_gain_ur_pp": 0.5,
+      "paper_gain_ut_pp": 3.2,
+      "gain_reduction_from_baseline": 0.15118276169678363,
+      "interval_95_reduction": [0.07536537479755843, 0.21930122584654313]
+    }
+  ],
+  "prequential": {
+    "dataset": "OneStop",
+    "minimum_prior_responses": 10,
+    "rows": 7918,
+    "readers": 180,
+    "base": {
+      "pooled_auroc": 0.5265297424252131,
+      "mean_within_reader_auroc": 0.5226916414730916,
+      "brier": 0.1843931346742473,
+      "log_loss": 0.5525061719876665
+    },
+    "penalties": {
+      "0.1": {
+        "pooled_auroc": 0.5791767285264777,
+        "mean_within_reader_auroc": 0.46042570273704214,
+        "brier": 0.16120973303713523,
+        "log_loss": 0.5121325695126085,
+        "pooled_gain": 0.05237210396924732,
+        "pooled_interval_95": [0.03292475105550481, 0.07249095879322817],
+        "within_reader_gain": -0.06227723902302165,
+        "within_reader_interval_95": [-0.07261689427602934, -0.05228711064817416]
+      },
+      "1": {
+        "pooled_auroc": 0.5710285148827283,
+        "mean_within_reader_auroc": 0.4753398973613563,
+        "brier": 0.16140880737460025,
+        "log_loss": 0.5058278708395213,
+        "pooled_gain": 0.04429117363948556,
+        "pooled_interval_95": [0.027833838722998428, 0.06123659446019406],
+        "within_reader_gain": -0.04732745224510263,
+        "within_reader_interval_95": [-0.05575778316245469, -0.03869006185413917]
+      },
+      "10": {
+        "pooled_auroc": 0.5489674824339914,
+        "mean_within_reader_auroc": 0.5051461607384978,
+        "brier": 0.1703329209467628,
+        "log_loss": 0.5223307099586724,
+        "pooled_gain": 0.02234515734486929,
+        "pooled_interval_95": [0.014387267571257337, 0.030518063921870685],
+        "within_reader_gain": -0.017539646378877494,
+        "within_reader_interval_95": [-0.023682335369597577, -0.011484595987219192]
+      },
+      "100": {
+        "pooled_auroc": 0.5312220414425968,
+        "mean_within_reader_auroc": 0.5197682235675791,
+        "brier": 0.1816798369041595,
+        "log_loss": 0.5466687038897197,
+        "pooled_gain": 0.004674735456289277,
+        "pooled_interval_95": [0.0031182736063793764, 0.006360128201266726],
+        "within_reader_gain": -0.0029307252595610765,
+        "within_reader_interval_95": [-0.004302361973745205, -0.0016189283301040554]
+      }
+    }
+  },
+  "robustness": {
+    "sbsat_reader_partition_by_model_family": {
+      "comparisons": 9,
+      "positive_paired_gain_in_all": true
+    },
+    "onestop_official_fold_regime_comparisons": {
+      "comparisons": 10,
+      "positive_paired_gain_in_all": true
+    },
+    "alternative_oof_and_selection_objectives": {
+      "maximum_absolute_difference_pp": 0.5,
+      "all_intervals_include_zero": true
+    }
+  },
+  "seeds": {
+    "outer_assignment": 20260929,
+    "cell": "20260929 + 100 * reader_fold + material_fold",
+    "representation_bootstrap_onestop": 20261511,
+    "representation_bootstrap_sbsat": 20261512,
+    "prequential_bootstrap": 20260926
+  }
+}

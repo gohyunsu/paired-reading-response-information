@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the accompanying manuscript."
+title: "Paired Evaluation of Response Information"
+type: software
+version: 1.0.0
+date-released: 2026-09-29
+repository-code: "https://github.com/gohyunsu/paired-reading-response-information"
+url: "https://github.com/gohyunsu/paired-reading-response-information"
+authors:
+  - family-names: Go
+    given-names: Hyunsu
+  - family-names: Lee
+    given-names: Sumin
+  - family-names: Kim
+    given-names: Kyeonghun
+  - family-names: Lee
+    given-names: Subeen
+  - family-names: Choi
+    given-names: Eunseob
+  - family-names: Liao
+    given-names: Ken Ying-Kai
+  - family-names: Kim
+    given-names: Nam-Joon
+preferred-citation:
+  type: generic
+  title: "Paired Evaluation of Reader- and Question-Level Response Information for Eye-Tracking-Based Reading-Comprehension Prediction"
+  year: 2026
+  url: "https://github.com/gohyunsu/paired-reading-response-information"
+  authors:
+    - family-names: Go
+      given-names: Hyunsu
+    - family-names: Lee
+      given-names: Sumin
+    - family-names: Kim
+      given-names: Kyeonghun
+    - family-names: Lee
+      given-names: Subeen
+    - family-names: Choi
+      given-names: Eunseob
+    - family-names: Liao
+      given-names: Ken Ying-Kai
+    - family-names: Kim
+      given-names: Nam-Joon

@@ -1,0 +1,22 @@
+{
+  "figures": {
+    "figure1_framework.png": {
+      "description": "Paired evaluation framework",
+      "sha256": "fefc36ae7f83a1cabc5073f4f58e2c053042137b2ec3a20decfdd8371b0c0ceb"
+    },
+    "figure2_inputs.png": {
+      "description": "SB-SAT trial construction and inputs",
+      "sha256": "2664ada3f2b8c25d6f295ba96cae30c231822028d6373d753e4695d93316cbd3"
+    },
+    "figure3_prequential.png": {
+      "description": "Prequential reader adaptation",
+      "sha256": "42a18ca90c4dcb79db8d6f58f9316d95d02c62cf28b5f53075e42b5881641ec7"
+    }
+  },
+  "summary_figure": {
+    "filename": "results_at_a_glance.svg",
+    "source": "results/paper_results.json",
+    "source_sha256": "4fed8a78d6248b212d7e31fb802a04646e96883beeed3872494819cc741f05ea",
+    "sha256": "3389cf8cd37fc6b0a41288acb7700a53d93636779de728ea66a44f7aed13cdae"
+  }
+}
